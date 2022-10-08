@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import argparse
 import re
 
@@ -97,6 +97,10 @@ if __name__ == "__main__":
 		"--max_length", 
 		type=int, 
 		help="Maximum length for a peptide to be considered valid."
+	)
+	parser.add_argument(
+		"--ek_test",
+		help="hello there"
 	)
 	kwargs = {k:v for k,v in vars(parser.parse_args()).items() if v}
 	input_file = kwargs.pop("input_file")
